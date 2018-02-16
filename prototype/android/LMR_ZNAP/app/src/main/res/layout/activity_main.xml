@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="1dp"
-    android:fillViewport="false">
+    android:background="@color/bg"
+
+    android:fillViewport="false"
+    android:orientation="vertical">
 
 
     <RelativeLayout
@@ -17,14 +18,11 @@
 
         <ImageView
             android:id="@+id/znap_logo"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
             android:layout_weight="1"
-            android:scaleType="center"
-            android:src="@drawable/znap_logo" />
+            android:layout_height="90dp"
+            android:src ="@drawable/znap_logo" />
 
         <Button
             android:id="@+id/bQueueState"
@@ -87,7 +85,6 @@
             android:theme="@style/mainActButton" />
 
 
-
         <Button
 
             android:id="@+id/bServices"
@@ -105,7 +102,6 @@
             android:layout_height="60dp"
             android:layout_below="@+id/bServices"
             android:layout_centerHorizontal="true"
-            android:drawableLeft="@drawable/headphones"
             android:text="Онлайн підтримка"
             android:theme="@style/mainActButton" />
 
@@ -116,8 +112,8 @@
             android:layout_height="60dp"
             android:layout_below="@+id/bOnline"
             android:layout_centerHorizontal="true"
-            android:theme="@style/mainActButton"
-            android:text="Про ЦНАП" />
+            android:text="Про ЦНАП"
+            android:theme="@style/mainActButton" />
 
         <RelativeLayout
             android:id="@+id/footer"

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.znap.lmr.lmr_znap.SignInActivity"
-    android:clickable="true"
     android:background="@color/bg"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
     android:padding="15dp"
-    android:focusableInTouchMode="true">
+    tools:context="com.znap.lmr.lmr_znap.SignInActivity">
 
     <ProgressBar
         android:id="@+id/progressBar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/znap_logo"
         android:layout_width="300dp"
+        android:layout_height="140dp"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:layout_height="140dp"
-        android:src ="@drawable/znap_logo" />
+        android:src="@drawable/znap_logo" />
 
     <TextView
 
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/znap_logo"
@@ -33,8 +33,7 @@
         android:layout_marginTop="55dp"
         android:text="Вхід в систему"
         android:textColor="#000"
-        android:textSize="30dp"
-        android:id="@+id/textView2" />
+        android:textSize="30dp" />
 
     <TextView
 
@@ -74,17 +73,17 @@
         android:id="@+id/etEmail"
         android:layout_width="350dp"
         android:layout_height="65dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:layout_weight="1"
+        android:background="#E0E0E0"
         android:drawableLeft="@drawable/man"
-        android:ems="10"
         android:drawablePadding="10dp"
-        android:paddingLeft="15dp"
+        android:ems="10"
         android:hint="  Email"
         android:inputType="textPersonName"
-        android:background="#E0E0E0"
+        android:paddingLeft="15dp"
         android:textColorHint="#BDBDBD"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="15dp" />
@@ -99,8 +98,9 @@
         android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:text="Увійти"
-        android:textColor="#FFFFFF"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+
         android:theme="@style/mainActButton"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="105dp" />
@@ -121,20 +121,19 @@
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="350dp"
-        android:layout_centerHorizontal="true"
         android:layout_height="65dp"
         android:layout_below="@+id/etEmail"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp"
         android:layout_weight="1"
+        android:background="#E0E0E0"
         android:drawableLeft="@drawable/lock"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint=" Пароль"
         android:inputType="textPassword"
-
-        android:drawablePadding="10dp"
         android:paddingLeft="15dp"
         android:textColorHint="#BDBDBD"
-        android:background="#E0E0E0"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="60dp" />
 
