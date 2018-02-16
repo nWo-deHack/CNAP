@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">ЦНАП м.Львів</string>
+    <string name="search_title">Search</string>
+    <string name="spinner_title">Вибір послуг</string>
+    <string name="permissions_not_granted_read_phone_state" />
+    <string name="permission_read_phone_state_rationale" />
+    <string-array name="znaps">
+        <item>вул. І. Виговського, 32</item>
+        <item>вул. Ген. Чупринки, 85</item>
+        <item>вул. К. Левицького, 67</item>
+        <item>вул. К. Левицького, 67</item>
+        <item>пр. Червоної Калини, 72а</item>
+        <item>пл. Ринок, 1</item>
+        <item>вул. Хвильового, 14а</item>
+    </string-array>
+    <string-array name="types">
+        <item>Отримати довідку</item>
+        <item>Подати довідку</item>
+    </string-array>
+    <string-array name="services">
+        <item>Послуги міської Ради</item>
+        <item>Оформлення паспорта громадянина </item>
+        <item>Держгеокадастр</item>
+        <item>Документи дозвільного характеру</item>
+        <item>Оформлення паспорта громадянина України</item>
+    </string-array>
+    <string-array name="times">
+        <item>27 грудня</item>
+        <item>28 грудня</item>
+        <item>29 грудня</item>
+    </string-array>
+    <string-array name="hours">
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+    </string-array>
+</resources>
