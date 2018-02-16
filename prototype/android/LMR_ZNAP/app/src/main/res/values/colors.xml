@@ -8,6 +8,8 @@
     <color name="color">#ECEFF1</color>
     <color name="bg">#fafafa</color>
     <color name="mainButtons">#BDBDBD</color>
-    <color name="colorNonActive">#78909C</color>
+    <color name="colorNonActive">#0c57b4</color>
+    <color name="test">#D7DBE6</color>
+
 
 </resources>
