@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.znap.lmr.lmr_znap.SignInActivity"
     android:clickable="true"
+    android:background="@color/bg"
+    android:padding="15dp"
     android:focusableInTouchMode="true">
 
     <ProgressBar
@@ -70,7 +72,7 @@
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="360dp"
+        android:layout_width="350dp"
         android:layout_height="65dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView2"
@@ -78,6 +80,8 @@
         android:layout_weight="1"
         android:drawableLeft="@drawable/man"
         android:ems="10"
+        android:drawablePadding="10dp"
+        android:paddingLeft="15dp"
         android:hint="  Email"
         android:inputType="textPersonName"
         android:background="#E0E0E0"
@@ -126,6 +130,9 @@
         android:ems="10"
         android:hint=" Пароль"
         android:inputType="textPassword"
+
+        android:drawablePadding="10dp"
+        android:paddingLeft="15dp"
         android:textColorHint="#BDBDBD"
         android:background="#E0E0E0"
         tools:layout_editor_absoluteX="30dp"
