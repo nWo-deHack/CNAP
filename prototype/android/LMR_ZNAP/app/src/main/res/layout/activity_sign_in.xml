@@ -15,40 +15,10 @@
         android:layout_height="wrap_content"
         android:visibility="invisible" />
 
-    <TextView
 
-        android:id="@+id/originalField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/originalField"
-        android:layout_alignLeft="@+id/originalField"
-        android:layout_alignStart="@+id/originalField"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="10dp" />
 
-    <TextView
 
-        android:id="@+id/encodedField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/decodedField"
-        android:layout_centerHorizontal="true"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="10dp" />
 
-    <TextView
-
-        android:id="@+id/decodedField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tSignUpLink"
-        android:layout_toEndOf="@+id/encodedField"
-        android:layout_toRightOf="@+id/encodedField"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="10dp" />
 
     <ImageView
         android:id="@+id/znap_logo"
