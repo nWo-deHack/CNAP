@@ -8,7 +8,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
-
+import retrofit2.http.Query;
 
 
 public interface Request {
@@ -39,11 +39,11 @@ public interface Request {
     @GET("/QueueService.svc/json_pre_reg/getServiceCenterList?organisationGuid=%7B28c94bad-f024-4289-a986-f9d79c9d8102%7D")
     Call<List<RecordToZnapAPI>> getRecordsToZnap();
 
-    @FormUrlEncoded
-    @POST("/api/v1.0/registerToQueue/")
-    Call<User> regToQueue(@Field("user_id") int user_id, @Field("znap_id") int znap_id, @Field("date") String date, @Field("time") String time,@Field("service") int service);
+    @GET("/QueueService.svc/json_wellcome_point/GetGroupsByCenterId")
+    Call<List<TypeOfServiceAPI>> getTypeOfService(@Query("organisationGuid") String organisationID, @Query("serviceCenterId") int znap_id);
 
-
+    @GET("/QueueService.svc/json_wellcome_point/getServicesByCenterId")
+    Call<List<ServiceChooserAPI>> getServices(@Query("organisationGuid") String organisationID, @Query("serviceCenterId")int znap_id, @Query("groupId") int group_id);
 }
 
 
