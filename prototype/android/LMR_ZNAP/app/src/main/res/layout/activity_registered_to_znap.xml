@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -29,25 +29,25 @@
                 android:id="@+id/spinnerForTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_marginTop="12dp"
-                android:entries="@array/times" />
+                android:entries="@array/times"
+                android:padding="15dp" />
 
             <Spinner
                 android:id="@+id/spinnerForHour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_marginTop="20dp"
-                android:entries="@array/hours" />
+                android:entries="@array/hours"
+                android:padding="15dp" />
 
             <Button
                 android:id="@+id/buttonTOReg"
-                android:layout_marginTop="50dp"
-                android:layout_gravity="center_horizontal"
-                android:text="Зареєструвати мене"
                 android:layout_width="240dp"
                 android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="Зареєструвати мене"
                 android:theme="@style/mainActButton" />
         </LinearLayout>
     </ScrollView>
