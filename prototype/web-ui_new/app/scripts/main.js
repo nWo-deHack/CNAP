@@ -1,21 +1,19 @@
 var admin_id = localStorage.getItem('admin_id');
 var znap_id = localStorage.getItem('znap_id');
 var users;
-console.log(znap_id);
+console.log(admin_id, znap_id);
 
 function getUsers() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://znap.pythonanywhere.com/api/v1.0/web_user/', false);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
-
   users = JSON.parse(xhr.response);
-  console.log(users);
   var rates_count = 0;
   for (var i = 0; i < users.length; i++) {
     $('#list').append('<tr class=\'user\'><th class=\'id\' scope=\'row\'></th><th class=\'name\'></th><' +
-      'th class=\'last_name\'></th><th class=\'email\'></th><th  class=\'phone\'></th><' +
-      'th class=\'is_closed\'></th><th  class=\'rate\'></th></tr>');
+        'th class=\'last_name\'></th><th class=\'email\'></th><th  class=\'phone\'></th><' +
+        'th class=\'is_closed\'></th><th  class=\'rate\'></th></tr>');
     var id = users[i].id;
     var first_name = users[i].first_name;
     var last_name = users[i].last_name;
@@ -44,7 +42,7 @@ function getUsers() {
     }
     if (users[i].rates.length > 0) {
       $('#list tr:last .rate').append(' <button id="dialog-opener" type="button" class="btn btn-primary active ui-butto' +
-        'n ui-corner-all ui-widget " onClick="openRates(' + users[i].id + ')">Написати</button>');
+          'n ui-corner-all ui-widget " onClick="openRates(' + users[i].id + ')">Написати</button>');
     } else {
       $('#list tr:last .rate').append('<button type="button" class ="btn .btn-warning disabled">Немає відгуків</button>');
     }
@@ -72,34 +70,31 @@ function getCnap(id) {
 }
 
 function getRate() {
-  //  console.log(admin_id);
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://znap.pythonanywhere.com/api/v1.0/znap/' + znap_id + '/rate/', false);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
+  var total_rate = 0;
   var rates = JSON.parse(xhr.response);
-  console.log(rates);
+  for (var i = 0; i < rates.length; i++) {
+    if (rates[i].quality > 0) 
+      total_rate++;
+    else 
+      total_rate--;
+    
+    $('#list2').append('<li class="rates-item" xmlns="http://www.w3.org/1999/html"><div class="row"> <di' +
+        'v class="col-md-6"><h4 class="name"></h4><h6 class="description"></h6></div><div' +
+        ' class="col-md-6 text-right"><h4 class="quality"></h4></div></div></li>');
 
-  for (var i = rates.length - 1; i >= 0; i--) {
-    var user = getUser(rates[i].user_id);
-    console.log(user);
-    var first_name = user.first_name;
-    var last_name = user.last_name;
-    var middle_name = user.middle_name;
-
-    $('#list2').append('<li class="list-group-item" xmlns="http://www.w3.org/1999/html"><div class="row"' +
-      '> <div class="col-md-6"><h4 class="name"></h4><h6 class="description"></h6></div' +
-      '><div class="col-md-6 text-right"><h4 class="quality"></h4><h6 class="time"></h6' +
-      '></div></div></li>');
-
-    $('#list2 li:last .name').append(first_name + ' ' + last_name);
+    $('#list2 li:last .name').append(rates[i].first_name + ' ' + rates[i].last_name);
     $('#list2 li:last .quality').append(rates[i].quality);
-    //$('#list2 li:last .time').append(rates[i].dialog[0].timeStamp);
     $('#list2 li:last .description').append(rates[i].description);
-
-    console.log(rates[i].description);
-    console.log(rates[i].quality);
   }
+  var result = total_rate >= 0
+    ? '<span style="color:green;"> +' + total_rate + '</span>'
+    : '<span style="color:red;"> -' + total_rate + '</span>';
+  console.log(result);
+  $('.total-rate').append(result);
 }
 
 function getAdminRates() {
@@ -108,7 +103,6 @@ function getAdminRates() {
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
   var rates = JSON.parse(xhr.response);
-  console.log(rates);
 }
 
 function closeRate(id) {
@@ -137,8 +131,7 @@ function openRates(id) {
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == id) {
       for (var j = 0; j < users[i].rates.length; j++) {
-        // var cnap = getCnap(users[i].rates[j].znap_id);
-        // console.log(cnap);
+        // var cnap = getCnap(users[i].rates[j].znap_id); console.log(cnap);
         $('#rates-modal .rates-content').append('<div class="rate-item"><div class="rate-time">' + new Date(users[i].rates[j].timestamp).getDate() + '.' + (new Date(users[i].rates[j].timestamp).getMonth() + 1) + '.' + new Date(users[i].rates[j].timestamp).getFullYear() + '</div><div class="rate-cnap">Cnap name</div><div class="rate-msg">' + users[i].rates[j].description + '</div><div class="btn rate-btn" target="' + users[i].rates[j].id + '">Message</div></div>');
       }
     }

@@ -2,29 +2,12 @@
 <html>
 
 <head>
-  <title>Admin Panel</title>
+  <title>New rates</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script type="application/x-javascript">
-    addEventListener("load", function () {
-      setTimeout(hideURLbar, 0);
-    }, false);
 
-    function hideURLbar() {
-      window.scrollTo(0, 1);
-    }
-
-  </script>
   <link href="./styles/main.css" rel="stylesheet">
-  <!-- jQuery -->
-  <script src="./scripts/jquery.min.js"></script>
-  <!--webfonts-->
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-  <!--//webfonts-->
-  <!-- Metis Menu Plugin JavaScript -->
-  <script src="./scripts/metisMenu.min.js"></script>
-  <script src="./scripts/custom.js"></script>
-  <!-- Graph JavaScript -->
+
 </head>
 
 <body onload="getRate()">
@@ -64,19 +47,19 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">
+              <a href="">
                 <i class="fa fa-envelope nav_icon"></i>Звернення
                 <span class="fa arrow-right"></span>
               </a>
               <ul class="dropdown">
                 <li>
-                  <a href="#"> Мої відкриті звернення</a>
+                  <a href="./my_open_rates.html"> Мої відкриті звернення</a>
                 </li>
                 <li>
-                  <a href="#"> Мої закриті звернення</a>
+                  <a href="./my_close_rates.html"> Мої закриті звернення</a>
                 </li>
                 <li>
-                  <a href="#"> Нові звернення</a>
+                  <a href=""> Нові звернення</a>
                 </li>
               </ul>
             </li>
@@ -87,9 +70,9 @@
       <!-- /.navbar-static-side -->
     </nav>
     <div id="page-wrapper">
-      <div class="content_bottom">
-
-        <ul id="list2" class="list-group"></ul>
+      <div class="content_bottom rates">
+        <div class="total-rate">Total rate: </div>
+        <ul id="list2" class="rates-list"></ul>
 
         <div class="clearfix"></div>
       </div>
@@ -97,11 +80,46 @@
     </div>
   </div>
   <!-- /#page-wrapper -->
-  <!-- Bootstrap Core JavaScript -->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/plugins.js -->
+
+  <!-- <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script> -->
+  <!-- <script src="/bower_components/bootstrap/js/dist/modal.js"></script> -->
+  <!-- <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/popover.js"></script> -->
+  <script src="./scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="./scripts/jquery-3.2.1.min.js"></script>
+  <script src="./scripts/jquery-ui.js"></script>
+  <script src="./scripts/jquery-ui.min.js"></script>
+  <script src="./scripts/jquery.table.hpaging.min.js"></script>
   <script src="./scripts/bootstrap.min.js"></script>
-  <script src="./scripts/main.js"></script>
   <script src="./scripts/pagination.js"></script>
   <script src="./scripts/search.js"></script>
+  <script src="./scripts/tablesorter.js"></script>
+  <script src="./scripts/dialog.js"></script>
+  <script type="text/javascript" src="./scripts/jquery.tablesorter.js"></script>
+
+  <script src="./scripts/metisMenu.min.js"></script>
+
+  <script src="scripts/login.js"></script>
+  <script src="./scripts/custom.js"></script>
+  <!-- endbuild -->
+
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 </body>
 
 </html>

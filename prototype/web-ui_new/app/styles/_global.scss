@@ -775,6 +775,9 @@ a.shortcut-tiles {
   flex: 1;
   display: flex;
   overflow: auto;
+  &.rates {
+    flex-direction: column;
+  }
 }
 
 .grid-date {
@@ -3510,4 +3513,44 @@ ul.new li.new_right {
     float: right;
     background: lightgray;
   }
+}
+
+.rates-list {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  .rates-item {
+    width: calc(50% - 20px);
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding: 20px 30px 20px 10px;
+    border-radius: 4px;
+    .row {
+      display: flex;
+      align-items: center;
+    }
+    .description {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .quality {
+      font-weight: bold;
+      font-size: 28px;
+      margin: 0;
+    }
+  }
+}
+
+.total-rate {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  font-size: 32px;
+  padding-top: 50px;
 }
