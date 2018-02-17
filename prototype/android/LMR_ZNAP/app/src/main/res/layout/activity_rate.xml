@@ -34,6 +34,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:textAlignment="center"
+                android:textColor="#000"
                 android:padding="10dp" />
 
             <EditText
@@ -72,7 +73,7 @@
                     android:background="@drawable/button"
                     android:drawableTop="@drawable/happy"
                     android:text="0"
-                    android:textColor="#fff" />
+                    android:textColor="@color/bg" />
 
                 <Button
                     android:id="@+id/btBad"
@@ -82,7 +83,7 @@
                     android:background="@drawable/button"
                     android:drawableTop="@drawable/sad"
                     android:text="1"
-                    android:textColor="#fff" />
+                    android:textColor="@color/bg" />
             </LinearLayout>
 
             <Button
