@@ -64,7 +64,6 @@ public class RateActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate);
         getSupportActionBar().setTitle(SystemMessages.RATE_TITLE);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         spinnerForZnaps = (Spinner) findViewById(R.id.znaps);
         spinnerForZnaps.setOnItemSelectedListener(this);
         etDescription = (EditText) findViewById(R.id.etDescription);

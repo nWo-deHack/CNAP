@@ -9,146 +9,117 @@
     android:padding="15dp"
     tools:context="com.znap.lmr.lmr_znap.SignInActivity">
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/znap_logo"
-        android:layout_width="300dp"
-        android:layout_height="140dp"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="1"
-        android:src="@drawable/znap_logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
+            <ImageView
+                android:id="@+id/znap_logo"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:src="@drawable/znap_logo" />
 
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/znap_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:text="Вхід в систему"
-        android:textColor="#000"
-        android:textSize="26dp" />
+            <TextView
 
-    <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Вхід в систему"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="26dp" />
 
-        android:id="@+id/originalField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/encodedField"
-        android:layout_centerHorizontal="true"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="10dp" />
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rouded"
+                android:drawableLeft="@drawable/man"
+                android:drawablePadding="10dp"
+                android:hint="  Email"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
 
-    <TextView
+                android:textColorHint="@color/bg"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="15dp" />
 
-        android:id="@+id/encodedField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/decodedField"
-        android:layout_centerHorizontal="true"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="10dp" />
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/etEmail"
 
-    <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
 
-        android:id="@+id/decodedField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:text=""
-        android:textColor="#000"
-        android:textSize="10dp" />
+                android:background="@drawable/rouded"
+                android:drawableLeft="@drawable/lock"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint=" Пароль"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:textColorHint="@color/bg"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="60dp" />
 
+            <Button
+                android:id="@+id/bSignIn"
+                android:layout_width="wrap_content"
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="285dp"
-        android:layout_height="55dp"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:layout_weight="1"
-        android:drawableLeft="@drawable/man"
-        android:drawablePadding="10dp"
-        android:ems="10"
+                android:layout_height="55dp"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="Увійти"
 
-        android:background="@drawable/rouded"
-        android:hint="  Email"
-        android:inputType="textPersonName"
-        android:paddingLeft="15dp"
-        android:textColorHint="@color/bg"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="15dp" />
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#fcfff5"
 
+                android:theme="@style/mainActButton"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="105dp" />
 
-    <Button
-        android:id="@+id/bSignIn"
-        android:layout_width="200dp"
-        android:layout_height="55dp"
-        android:layout_below="@+id/etPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        android:layout_weight="1"
-        android:text="Увійти"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:text="Не маєте облікового запису ?"
+                android:textAlignment="center" />
 
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#fcfff5"
+            <TextView
+                android:id="@+id/tSignUpLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="11dp"
+                android:layout_weight="1"
+                android:text="Зареєструватися"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                tools:layout_editor_absoluteX="169dp"
+                tools:layout_editor_absoluteY="162dp" />
 
-        android:theme="@style/mainActButton"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="105dp" />
-
-    <TextView
-        android:id="@+id/tSignUpLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="right"
-        android:layout_marginBottom="11dp"
-        android:text="Зареєструватися"
-        android:textColor="@color/colorNonActive"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="162dp" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="285dp"
-        android:layout_height="55dp"
-        android:layout_below="@+id/etEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        android:layout_weight="1"
-
-        android:background="@drawable/rouded"
-        android:drawableLeft="@drawable/lock"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint=" Пароль"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textColorHint="@color/bg"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="60dp" />
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tSignUpLink"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:text="Не маєте облікового запису ?" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
