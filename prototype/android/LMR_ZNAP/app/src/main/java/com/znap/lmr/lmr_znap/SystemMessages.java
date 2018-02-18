@@ -11,6 +11,9 @@ public class SystemMessages {
     public static final String GROUP_ID = "group_id";
     public static final String RATE_TITLE = "Відгук";
     public static final String QUEUE_STATE_TITLE = "Стан черги";
+
+    public static final String ABOUT_US_TITLE = "Про нас";
+    public static final String REVIEWS_TITLE = "Мої відгуки";
     public static final String REG_TO_QUEUE_TITLE = "Реєстрація у чергу";
     public static final String OK = "OK";
     public static final String BAD_REQUEST = "Bad Request";
