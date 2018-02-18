@@ -18,10 +18,9 @@ public class AboutUsActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_about_us);
-            title = (TextView) findViewById(R.id.textView6);
             desc = (TextView) findViewById(R.id.textView7);
             image = (ImageView) findViewById(R.id.image);
-            getSupportActionBar().setTitle(SystemMessages.QUEUE_STATE_TITLE);
+            getSupportActionBar().setTitle(SystemMessages.ABOUT_US_TITLE);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
