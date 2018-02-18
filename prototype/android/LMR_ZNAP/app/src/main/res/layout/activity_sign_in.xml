@@ -21,7 +21,7 @@
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:src="@drawable/logo_test" />
+        android:src="@drawable/znap_logo" />
 
     <TextView
 
@@ -78,13 +78,14 @@
         android:layout_marginTop="14dp"
         android:layout_weight="1"
         android:drawableLeft="@drawable/man"
-        android:background="@drawable/roundet"
         android:drawablePadding="10dp"
         android:ems="10"
+
+        android:background="@drawable/rouded"
         android:hint="  Email"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
-        android:textColorHint="#3e606f"
+        android:textColorHint="@color/bg"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="15dp" />
 
@@ -128,14 +129,14 @@
         android:layout_marginTop="29dp"
         android:layout_weight="1"
 
-        android:background="@drawable/roundet"
+        android:background="@drawable/rouded"
         android:drawableLeft="@drawable/lock"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint=" Пароль"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        android:textColorHint="#3e606f"
+        android:textColorHint="@color/bg"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="60dp" />
 

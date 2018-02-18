@@ -19,7 +19,7 @@
             android:layout_weight="1"
 
             android:layout_height="90dp"
-            android:src ="@drawable/logo_test" />
+            android:src ="@drawable/znap_logo" />
     </LinearLayout>
 
     <LinearLayout
